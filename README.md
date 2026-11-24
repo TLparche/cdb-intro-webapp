@@ -22,3 +22,6 @@ python3 -m http.server 8712
 ```
 
 `deploy.sh`는 S3에 파일을 동기화하고 CloudFront 캐시를 무효화합니다.
+
+- 배포 URL: https://d1n6iyz2a3mw2g.cloudfront.net
+- S3 버킷: `cdb-intro-webapp-476512462101` (퍼블릭 액세스 차단, OAC로만 읽기)
