@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>신동호 | 자기소개</title>
+  <meta name="description" content="데이터를 설계하고 클라우드에 올리는 ICT융합학부 4학년 신동호의 자기소개 사이트">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home">신동호</a>
+    <nav>
+      <a href="#about">소개</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#contact">연락처</a>
+      <a href="#guestbook">방명록</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- S01 Home -->
+    <section id="home" class="hero">
+      <div class="avatar" aria-hidden="true">DH</div>
+      <h1>신동호</h1>
+      <p class="lead">데이터를 설계하고 클라우드에 올리는 ICT융합학부 4학년</p>
+      <a class="btn" href="#projects">프로젝트 보기</a>
+    </section>
+
+    <!-- S02 소개 -->
+    <section id="about">
+      <h2>소개</h2>
+      <dl class="facts">
+        <dt>학력</dt><dd>ICT융합학부 4학년</dd>
+        <dt>관심 분야</dt><dd>클라우드 데이터베이스, 데이터 모델링</dd>
+      </dl>
+      <h3>기술 스택</h3>
+      <ul class="chips">
+        <li>PostgreSQL</li><li>SQL</li><li>Python</li>
+        <li>AWS S3</li><li>CloudFront</li><li>AppSync</li><li>DynamoDB</li>
+        <li>HTML/CSS/JavaScript</li>
+      </ul>
+      <h3>클라우드데이터베이스기초에서 배운 것</h3>
+      <ul class="learned">
+        <li><b>설계</b> 요구 분석 → 개념(ER) → 논리(릴레이션 스키마) → 물리 모델링</li>
+        <li><b>정규화</b> 1NF~5NF로 중복과 이상 현상 제거</li>
+        <li><b>트랜잭션</b> ACID, 격리 수준, 교착 상태 확인</li>
+        <li><b>인덱스</b> B-tree·부분 인덱스와 실행 계획(EXPLAIN)</li>
+      </ul>
+    </section>
+
+    <!-- S03 프로젝트 -->
+    <section id="projects">
+      <h2>프로젝트</h2>
+      <div class="filters" role="group" aria-label="기술 태그 필터">
+        <button type="button" data-tag="전체" aria-pressed="true">전체</button>
+        <button type="button" data-tag="PostgreSQL" aria-pressed="false">PostgreSQL</button>
+        <button type="button" data-tag="AWS" aria-pressed="false">AWS</button>
+      </div>
+      <div id="project-list" class="cards"></div>
+    </section>
+
+    <!-- S04 연락처 -->
+    <section id="contact">
+      <h2>연락처</h2>
+      <p>채용·협업 문의는 이메일로 연락 주세요.</p>
+      <p class="contact-row">
+        <a id="email-link" href="#"></a>
+        <button type="button" id="copy-email" class="btn small">주소 복사</button>
+        <span id="copy-msg" role="status"></span>
+      </p>
+      <p><a href="https://github.com/TLparche" target="_blank" rel="noopener">GitHub</a></p>
+    </section>
+
+    <!-- S05 방명록 -->
+    <section id="guestbook">
+      <h2>방명록</h2>
+      <form id="gb-form" novalidate>
+        <label>이름
+          <input name="name" maxlength="20" autocomplete="nickname">
+          <small class="err" data-for="name"></small>
+        </label>
+        <label>메시지
+          <textarea name="message" maxlength="200" rows="3"></textarea>
+          <small class="err" data-for="message"></small>
+        </label>
+        <button type="submit" class="btn">등록</button>
+        <span id="gb-msg" role="status"></span>
+      </form>
+      <p class="note">1주차: 화면과 입력 검증만 동작합니다. 저장은 AppSync + DynamoDB 연동 후 열립니다.</p>
+      <ul id="gb-list" class="gb-list"></ul>
+    </section>
+  </main>
+
+  <dialog id="detail">
+    <button type="button" class="close" aria-label="닫기">×</button>
+    <div id="detail-body"></div>
+  </dialog>
+
+  <footer>© 2026 신동호 · S3 + CloudFront</footer>
+  <script src="app.js"></script>
+</body>
+</html>
