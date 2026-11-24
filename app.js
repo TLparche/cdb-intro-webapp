@@ -1,5 +1,5 @@
 // 1주차: 정적 데이터. 2주차부터 AppSync listProjects / listGuestbook / addGuestbook으로 교체.
-const EMAIL = 'TODO@example.com';
+const EMAIL = 'h010508@gmail.com';
 
 const PROJECTS = [
   {
